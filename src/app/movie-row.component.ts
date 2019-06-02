@@ -32,23 +32,28 @@ import {Movie} from './movie.model';
         <div *ngFor="let genre of genres">
           <ng-container *ngIf="isGenreAllowed(genre)">
             <h1 class="heading-primary pl-5">{{genre.toUpperCase()}}</h1>
-            <div class="row single-line-row align-middle px-4">
-           <span class="scroll__left align-middle pr-5 fa fa-arrow-left"
-                 (mouseover)="scrollLeft(genre)"
-                 (mouseout)="cancelScroll()"></span>
-              <div [attr.id]="genre" class="row single-line-row mb-5">
-                <div class="py-4" *ngFor="let movie of movies">
-                  <div class="col-md-6" *ngIf="isInCorrectGenre(movie, genre)" (click)="goToMovieDetails(movie)">
-                    <div class="film-card">
-                      <img [src]="'assets/images/movie-covers/' + movie?.img">
+            <div class="mozilla-scrollbar-hack">
+              <div class="row single-line-row align-middle px-4">
+                 <span class="scroll__left align-middle pr-5 fa fa-arrow-left"
+                       (mouseover)="scrollLeft(genre)"
+                       (mouseout)="cancelScroll()"></span>
+                <div class="mozilla-scrollbar-hack">
+                  <div [attr.id]="genre" class="row single-line-row mb-5">
+                    <div class="py-4" *ngFor="let movie of movies">
+                      <div class="col-md-6" *ngIf="isInCorrectGenre(movie, genre)" (click)="goToMovieDetails(movie)">
+                        <div class="film-card">
+                          <img [src]="'assets/images/movie-covers/' + movie?.img">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <span class="scroll__right pl-5 fa fa-arrow-right align-content-center"
+                      (mouseover)="scrollRight(genre)"
+                      (mouseout)="cancelScroll()"></span>
               </div>
-              <span class="scroll__right pl-5 fa fa-arrow-right align-content-center"
-                    (mouseover)="scrollRight(genre)"
-                    (mouseout)="cancelScroll()"></span>
             </div>
+
           </ng-container>
         </div>
       </ng-container>

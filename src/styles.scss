@@ -151,6 +151,10 @@ body {
   }
 }
 
+.mozilla-scrollbar-hack {
+  overflow: hidden;
+}
+
 @media screen and (max-width: $break-small) {
   .detail-view-image {
     width: 100%;
