@@ -11,7 +11,6 @@ import {MovieOverViewComponent} from './movie-over-view.component';
 import {NavigationContext} from './navigation-context';
 import {MovieHttpService} from './movie.http-service';
 import {MovieDetailComponent} from './movie-detail.component';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 @NgModule({
   imports: [BrowserModule,

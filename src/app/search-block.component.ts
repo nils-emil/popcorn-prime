@@ -3,7 +3,7 @@ import {NavigationContext} from './navigation-context';
 import {MovieHttpService} from './movie.http-service';
 
 @Component({
-  selector: 'search-block',
+  selector: 'app-search-block',
   template: `
     <button type="button" class="nav-bar__button rounded-circle" (click)="toggleMenu()">
       <span class="fa fa-search"></span>
@@ -16,8 +16,7 @@ import {MovieHttpService} from './movie.http-service';
              [(ngModel)]="navigationContext.movieNameKeyword"
              placeholder="Type keyword">
       <!--GENRE-->
-      <ng-container *ngIf="!navigationContext.movieNameKeyword 
-      || navigationContext.movieNameKeyword.length === 0">
+      <ng-container *ngIf="!navigationContext.movieNameKeyword || navigationContext.movieNameKeyword.length === 0">
         <p class="pt-3">Select genre</p>
         <ul>
           <div class="form-check py-1" *ngFor="let genre of genres">
@@ -61,7 +60,7 @@ export class SearchBlockComponent implements OnInit {
   }
 
   toggleGenre(genre: string): void {
-    let index = this.navigationContext.selectedGenres.indexOf(genre);
+    const index = this.navigationContext.selectedGenres.indexOf(genre);
     if (index > -1) {
       if (this.navigationContext.selectedGenres.length === 1) {
         this.navigationContext.selectedGenres = [];

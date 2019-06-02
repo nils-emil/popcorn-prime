@@ -5,7 +5,7 @@ import {MovieHttpService} from './movie.http-service';
 import {Movie} from './movie.model';
 
 @Component({
-  selector: 'movie-row',
+  selector: 'app-movie-row',
   template: `
     <div class="container">
       <div *ngIf="navigationContext.movieNameKeyword.length > 0">

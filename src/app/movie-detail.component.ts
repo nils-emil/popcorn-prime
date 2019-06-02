@@ -4,7 +4,7 @@ import {MovieHttpService} from './movie.http-service';
 import {Movie} from './movie.model';
 
 @Component({
-  selector: 'movie-detail',
+  selector: 'app-movie-detail',
   template: `
     <button type="button" class="nav-bar__button nav-bar__button-left rounded-circle" (click)="navigateToMainPage()">
       <span class="fa fa-arrow-left"></span>

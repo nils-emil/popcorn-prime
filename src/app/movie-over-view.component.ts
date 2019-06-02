@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavigationContext} from './navigation-context';
 
 @Component({
-  selector: 'movie-overview',
+  selector: 'app-movie-overview',
   template: `
     <div class="row m-0">
       <movie-row class="movie-content__nav-bar-active p-0 pt-5 col-sm-10 col-7" *ngIf="isMenuToggled()"></movie-row>
