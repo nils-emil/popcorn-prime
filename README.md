@@ -13,6 +13,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 This application has no API connected to it. Currently only using mock-data.
 The application allows searching for a specific movie by keyword or filtering movies by genre. Each movie has a detail page if the poster was to be clicked.
+No tests unfortunately.
 
 
 ## Development server
@@ -29,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Launching 
 
-A working demo can be seen: http://nilill.github.io/
+A working demo can be seen: http://nils-emil.github.io/

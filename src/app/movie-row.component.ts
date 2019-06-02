@@ -9,7 +9,7 @@ import {Movie} from './movie.model';
   template: `
     <div class="container">
       <div *ngIf="navigationContext.movieNameKeyword.length > 0">
-        <h1 class="heading-primary pl-5">Search results for '{{navigationContext.movieNameKeyword}}'</h1>
+        <h1 class="heading-primary">Search results for '{{navigationContext.movieNameKeyword}}'</h1>
         <div class="row single-line-row align-middle px-4">
            <span class="scroll__left align-middle pr-5 fa fa-arrow-left"
                  (mouseover)="scrollLeft('keyWordSearch')"
