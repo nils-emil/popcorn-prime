@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable, of as observableOf} from 'rxjs';
+import {Observable, of as observableOf, throwError as observableThrowError} from 'rxjs';
 import {Movie} from './movie.model';
 import {movies} from './movie.mock-data';
 
@@ -14,7 +14,7 @@ export class MovieHttpService {
     if (filteredMovies.length > 0) {
       return observableOf(filteredMovies[0]);
     }
-    return Observable.throw('Not found');
+    return observableThrowError('Not found');
   }
 
   getMovieGenres(): Observable<string[]> {
